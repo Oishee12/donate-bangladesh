@@ -36,7 +36,7 @@
         </div>
         <div class="navbar-end lg:gap-3 lg:pr-9">
           <div><img src="./assets/coin.png" alt=""></div>
-          <div>5500 BDT</div>
+          <div id="remaining-input">20000 BDT</div>
         </div>
       </div>
     </nav>
@@ -58,16 +58,16 @@
           <div class="w-full lg:w-1/2">
               <button class="btn">
               <div><img src="./assets/coin.png" alt="coin"></div>
-              <div>0 BDT</div>
+              <div id="total_donate_noakhali">0 BDT</div>
             </button>
             <h3 class="font-semibold my-3">Donate for Flood at Noakhali, Bangladesh</h3>
             <p class="w-11/12 text-stone-500 text-sm my-3"> The recent floods in Noakhali have caused significant damage
               to homes infrastructure. Your donation will help provide essential supplies and to those affected by this
               disaster. Every contribution, big or small, makes difference. Please join us in supporting the relief
               efforts and making a positive impact on the lives of those in need.</p>
-            <input class="w-11/12 outline-0 rounded-md mb-2 py-2 border-gray-500" type="text"
+            <input id="donate_input_noakhali" class="w-11/12 outline-0 rounded-md mb-2 py-2 border-gray-500" type="text"
               placeholder="Write donation amount">
-            <button class="btn w-11/12 border-gray-500 rounded-md">Donate Now</button>
+            <button id="donate_btn_noakhali" class="btn w-11/12 border-gray-500 rounded-md">Donate Now</button>
           </div>
         </div>
       </div>
@@ -119,6 +119,17 @@
         </div>
       </div>
     </section>
+
+    <!-- added modal -->
+     <section  id="donation_modal" class="hidden fixed inset-0 flex items-center justify-center">
+      <div class="border border-gray-300 rounded-lg w-2/5 bg-red-50 p-3">
+        <h1 class="font-bold text-2xl text-center">Congrates!</h1>
+        <div class="flex justify-center items-center my-2"><img src="./assets/coin.png" alt="coin icon"></div>
+        <p class="text-center">You have donated for humankind</p>
+        <h3 class="font-semibold text-center my-2">Succesfully</h3>
+        <div class="flex justify-center items-center"><button class="btn bg-white text-gray-800 hover:!bg-white" id="close_modal">Close information</button></div>
+      </div>
+     </section>
   </main>
 
   <footer>
@@ -127,6 +138,8 @@
       </div>
     </nav>
   </footer>
+
+  
 
   <script src="./donate_feni.js"></script>
 </body>
