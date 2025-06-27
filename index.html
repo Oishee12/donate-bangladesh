@@ -21,11 +21,11 @@
 
 </head>
 
-<body class="max-h-max mx-auto">
+<body>
   <header>
     <nav class="mb-11">
       <div class="navbar bg-base-100 bg-red-50 py-6">
-        <div class="navbar-start pl-9">
+        <div class="navbar-start hidden lg:block lg:pl-9">
           <div>
             Blog
           </div>
@@ -34,7 +34,7 @@
           <div class="h-8 w-7"><img class="h-full w-full" src="./assets/logo.png" alt=""></div>
           <div>Donate Bangladesh</div>
         </div>
-        <div class="navbar-end gap-3 pr-9">
+        <div class="navbar-end lg:gap-3 lg:pr-9">
           <div><img src="./assets/coin.png" alt=""></div>
           <div>5500 BDT</div>
         </div>
@@ -49,14 +49,14 @@
   </header>
 
   <main class="mt-6">
-    <section>
-      <div class="w-2/3 border mx-auto rounded-md border-gray-300 mb-6">
-        <div class="flex m-4">
-          <div class="w-1/2"><img class="w-11/12" src="./assets/noakhali.png"
+    <section class="flex flex-col">
+      <div class="w-10/12 lg:w-2/3 border mx-auto rounded-md border-gray-300 mb-6">
+        <div class="flex flex-col lg:flex-row m-4">
+          <div class="w-full mb-4 lg:w-1/2"><img class="w-11/12" src="./assets/noakhali.png"
               alt="A picture of foating boat on a flood">
           </div>
-          <div class="w-1/2">
-            <button class="btn">
+          <div class="w-full lg:w-1/2">
+              <button class="btn">
               <div><img src="./assets/coin.png" alt="coin"></div>
               <div>0 BDT</div>
             </button>
@@ -72,18 +72,22 @@
         </div>
       </div>
 
-      <div class="w-2/3 border mx-auto rounded-md border-gray-300 mb-6">
-        <div class="flex m-4">
-          <div class="w-1/2"><img class="w-11/12" src="./assets/feni.png"
+      <div class="w-10/12 lg:w-2/3 border mx-auto rounded-md border-gray-300 mb-6">
+        <div class="flex flex-col lg:flex-row m-4">
+          <div class="w-full mb-4 lg:w-1/2"><img class="w-11/12" src="./assets/feni.png"
               alt="A picture of foating boat on a flood">
           </div>
-          <div class="w-1/2">
+          <div class="w-full lg:w-1/2">
             <button class="btn">
               <div><img src="./assets/coin.png" alt="coin"></div>
               <div>600 BDT</div>
             </button>
             <h3 class="font-semibold my-3">Donate for Flood Relief in Feni,Bangladesh</h3>
-            <p class="w-11/12 text-stone-500 text-sm my-3">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference.</p>
+            <p class="w-11/12 text-stone-500 text-sm my-3">The recent floods in Feni have devastated local communities,
+              leading to severe disruption and loss. Your generous donation will help provide immediate aid, including
+              food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer
+              crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts
+              towards making a real difference.</p>
             <input class="w-11/12 outline-0 rounded-md mb-2 py-2 border-gray-500" type="text"
               placeholder="Write donation amount">
             <button class="btn w-11/12 border-gray-500 rounded-md">Donate Now</button>
@@ -91,18 +95,23 @@
         </div>
       </div>
 
-      <div class="w-2/3 border mx-auto rounded-md border-gray-300 mb-6">
-        <div class="flex m-4">
-          <div class="w-1/2"><img class="w-11/12" src="./assets/quota-protest.png"
+      <div class="w-10/12 lg:w-2/3 border mx-auto rounded-md border-gray-300 lg:mb-6">
+        <div class="flex flex-col lg:flex-row m-4">
+          <div class="w-full mb-4 lg:w-1/2"><img class="w-11/12" src="./assets/quota-protest.png"
               alt="A picture of foating boat on a flood">
           </div>
-          <div class="w-1/2">
+          <div class="w-full lg:w-1/2">
             <button class="btn">
               <div><img src="./assets/coin.png" alt="coin"></div>
               <div>2400 BDT</div>
             </button>
             <h3 class="font-semibold my-3">Aid for Injured in the Quota Movement</h3>
-            <p class="w-11/12 text-stone-500 text-sm my-3"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave.</p>
+            <p class="w-11/12 text-stone-500 text-sm my-3"> The recent Quota movement has resulted in numerous injuries
+              and significant hardship for many individuals. Your support is crucial in providing medical assistance,
+              rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured
+              individuals receive the care and support they need during this challenging time. Every donation plays a
+              vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation
+              to support these brave.</p>
             <input class="w-11/12 outline-0 rounded-md mb-2 py-2 border-gray-500" type="text"
               placeholder="Write donation amount">
             <button class="btn w-11/12 border-gray-500 rounded-md">Donate Now</button>
@@ -113,11 +122,13 @@
   </main>
 
   <footer>
-<nav class="mt-8">
+    <nav class="mt-4">
       <div class="navbar bg-red-100">
       </div>
     </nav>
   </footer>
+
+  <script src="./donate_feni.js"></script>
 </body>
 
 </html>
