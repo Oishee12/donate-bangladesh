@@ -23,7 +23,7 @@
 
 <body>
   <header>
-    <nav class="mb-11">
+    <nav class=" fixed top-0 left-0 w-full z-50">
       <div class="navbar bg-base-100 bg-red-50 py-6">
         <div class="navbar-start hidden lg:block lg:pl-9">
           <div>
@@ -36,11 +36,11 @@
         </div>
         <div class="navbar-end lg:gap-3 lg:pr-9">
           <div><img src="./assets/coin.png" alt=""></div>
-          <div id="remaining-input">20000 BDT</div>
+          <div class="remaining-donation">20000 BDT</div>
         </div>
       </div>
     </nav>
-    <section>
+    <section class="pt-28">
       <div class="flex justify-center gap-5">
         <div><button class="btn">Donation</button></div>
         <div><button class="btn">History</button></div>
@@ -80,7 +80,7 @@
           <div class="w-full lg:w-1/2">
             <button class="btn">
               <div><img src="./assets/coin.png" alt="coin"></div>
-              <div>600 BDT</div>
+              <div id="donatefeni_total">600 BDT</div>
             </button>
             <h3 class="font-semibold my-3">Donate for Flood Relief in Feni,Bangladesh</h3>
             <p class="w-11/12 text-stone-500 text-sm my-3">The recent floods in Feni have devastated local communities,
@@ -88,9 +88,9 @@
               food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer
               crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts
               towards making a real difference.</p>
-            <input class="w-11/12 outline-0 rounded-md mb-2 py-2 border-gray-500" type="text"
+            <input id="donatefeni_input" class="w-11/12 outline-0 rounded-md mb-2 py-2 border-gray-500" type="text"
               placeholder="Write donation amount">
-            <button class="btn w-11/12 border-gray-500 rounded-md">Donate Now</button>
+            <button id="donatefeni_btn" class="btn w-11/12 border-gray-500 rounded-md">Donate Now</button>
           </div>
         </div>
       </div>
@@ -139,8 +139,7 @@
     </nav>
   </footer>
 
-  
-
+  <script src="./donate_noakhali.js"></script>
   <script src="./donate_feni.js"></script>
 </body>
 

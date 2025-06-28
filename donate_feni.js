@@ -1,33 +1,25 @@
-const donateBtn = document.getElementById('donate_btn_noakhali');
-const donateInput = document.getElementById('donate_input_noakhali');
-const totalDonate = document.getElementById('total_donate_noakhali');
-const remainingAmount = document.getElementById('remaining-input');
+const donateFeniBtn = document.getElementById('donatefeni_btn');
+const donateFeniInput = document.getElementById('donatefeni_input');
+const donateFeniTotal = document.getElementById('donatefeni_total');
+const donateRemaining = document.querySelector('.remaining-donation');
 
-const donationModal = document.getElementById('donation_modal');
-const closeModal = document.getElementById('close_modal');
+let totalFeniDonation = 600;
+let remainingDonation = parseFloat(donateRemaining.textContent);
+// console.log(remainingDonation);
 
-let totalDonation = 0;
-let remainingAmountnav = 20000;
+donateFeniBtn.addEventListener('click', function(){
+    const feniAmount = parseFloat(donateFeniInput.value);  
+    if(!feniAmount || feniAmount <= 0 || feniAmount > remainingDonation){
+        alert('please enter valid amount');
+        donateFeniInput.value = '';
+        totalFeniDonation = totalFeniDonation;
+        remainingDonation = remainingDonation;
+    }
 
-donateBtn.addEventListener('click', function () {
-    const amount = parseFloat(donateInput.value);
-   if (!amount || amount <= 0 || amount > remainingAmountnav){
-    alert('please enter valid amount');
-    donateInput.value = '';
-    totalDonate = totalDonate;
-    remainingAmount = remainingAmount;
-   }
+    totalFeniDonation += feniAmount;
+    donateFeniTotal.textContent = `${totalFeniDonation} BDT`;
+    donateFeniInput.value = '';
+    remainingDonation -= feniAmount;
 
-   totalDonation = totalDonation + amount;
-   totalDonate.textContent = `${totalDonation} BDT`;
-    
-   remainingAmountnav -= amount;
-   remainingAmount.textContent = `${remainingAmountnav} BDT`;
-
-   donationModal.classList.remove('hidden');
-   donateInput.value = '';
-})
-
-closeModal.addEventListener('click', function(){
-    donationModal.classList.add('hidden');
+     donateRemaining.textContent = `${remainingDonation} BDT`;
 })
